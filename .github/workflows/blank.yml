@@ -4,10 +4,10 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  pull_request:
-    # Sequence of patterns matched against refs/heads
+  push:
+    # refs/headsに対してマッチするパターンのシーケンス
     branches:    
-      - 'feature/hoge**'
+      - 'releases/hoge**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
