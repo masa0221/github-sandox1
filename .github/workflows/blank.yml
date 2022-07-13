@@ -17,6 +17,7 @@ jobs:
       - name: Create Comment file
         run: |
           cat << EOF > comment
+          @${{ github.event.sender.login }}
           ちゃんと投稿された？
           - [ ] された
           EOF
