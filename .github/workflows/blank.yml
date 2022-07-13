@@ -10,7 +10,7 @@ on:
 
 jobs:
   pr-comment:
-    if:  startsWith(github.head_ref, 'feature/hoge')
+    if: startsWith(github.head_ref, 'feature/hoge-') or startsWith(github.head_ref, 'hoge-')
     runs-on: ubuntu-latest
 
     steps:
