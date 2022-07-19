@@ -1,13 +1,13 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - 'feature/hoge-[0-9]+**'
-      - 'hoge-[0-9]+**'
+  pull_request:
+    types:
+      - opened
 
 jobs:
   pr-comment:
+    if: startsWith(github.head_ref, 'feature/hoge-') or startsWith(github.head_ref, 'hoge-')
     runs-on: ubuntu-latest
 
     steps:
